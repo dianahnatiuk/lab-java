@@ -1,0 +1,39 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-create-hotel-table
+      author: developer
+      changes:
+        - createTable:
+            tableName: hotels
+            columns:
+              - column:
+                  name: id
+                  type: BIGSERIAL
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: location
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: city
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: description
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: price_per_night
+                  type: DOUBLE PRECISION
+                  constraints:
+                    nullable: true
